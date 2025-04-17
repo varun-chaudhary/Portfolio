@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
 import image from "../../assets/img/hero_img.png";
 import { Bio } from "../../data/constants";
@@ -16,13 +16,22 @@ const LazySpline = React.lazy(() => import("@splinetool/react-spline"));
 
 const HeroSection = () => {
   const [isSplineLoaded, setIsSplineLoaded] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleLoad = () => {
-    //10 s load
     setTimeout(() => {
       setIsSplineLoaded(true);
     }, 10000);
-    // setIsSplineLoaded(true);
   };
 
   return (
@@ -51,33 +60,43 @@ const HeroSection = () => {
               </TextLoop>
 
               <SubTitle
-  className="text-justify"
-  dangerouslySetInnerHTML={{ __html: Bio.description }}
-/>
+                className="text-justify"
+                dangerouslySetInnerHTML={{ __html: Bio.description }}
+              />
 
-              <ResumeButton href={Bio.resume} target="display">
-                Check Resume
-              </ResumeButton>
+              <div
+                className={`mt-6 ${
+                  isMobile ? "flex justify-center" : ""
+                }`}
+              >
+                <ResumeButton href={Bio.resume} target="display">
+                  Check Resume
+                </ResumeButton>
+              </div>
             </div>
-            <div id="Right" className="lg:order-2 sm:order-1 -m-48 h-92 ">
-              <div className="relative mt-10 w-full h-screen">
-                <img
-                  src={image}
-                  alt="hero"
-                  className={`absolute inset-0 w-full h-full object-cover scale-110 transition-opacity duration-500 ${
-                    isSplineLoaded ? "opacity-0" : "opacity-100"
-                  }`}
-                />
-                <Suspense fallback={null}>
-                  <LazySpline
-                    scene="https://prod.spline.design/UTFMrrw71-cpURyo/scene.splinecode"
-                    onLoad={handleLoad}
-                    className={`absolute inset-0 w-full h-full transition-opacity duration-500 ${
-                      isSplineLoaded ? "opacity-100" : "opacity-0"
+
+            <div id="Right" className="lg:order-2 sm:order-1 -m-48 h-92">
+              {!isMobile && (
+                <div className="relative mt-10 w-full h-screen">
+                  <img
+                    src={image}
+                    alt="hero"
+                    className={`absolute inset-0 w-full h-full object-cover scale-110 transition-opacity duration-500 ${
+                      isSplineLoaded ? "opacity-0" : "opacity-100"
                     }`}
                   />
-                </Suspense>
-              </div>
+                  <Suspense fallback={null}>
+                    <LazySpline
+                      scene="https://prod.spline.design/UTFMrrw71-cpURyo/scene.splinecode"
+                      onLoad={handleLoad}
+                      className={`absolute inset-0 w-full h-full transition-opacity duration-500 ${
+                        isSplineLoaded ? "opacity-100" : "opacity-0"
+                      }`}
+                    />
+                  </Suspense>
+                </div>
+              )}
+
             </div>
           </div>
         </HeroInnerContainer>
