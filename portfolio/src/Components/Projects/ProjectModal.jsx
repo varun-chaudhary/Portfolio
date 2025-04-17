@@ -7,7 +7,8 @@ import 'slick-carousel/slick/slick.css'
 import styled, { useTheme } from 'styled-components'
 
 const Card = styled.div`
-  background-color: ${({ theme }) => theme.card};
+background: ${({ theme }) =>
+  `linear-gradient(145deg, ${theme.card_light}, ${theme.bgLight}, rgba(255, 255, 255, 0.05))`};
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   padding: 30px 24px;
@@ -166,19 +167,15 @@ export default function ProjectModal({ project, close, isOpen }) {
 
   return (
     <Dialog open={isOpen} onClose={close} className="relative z-10">
-      {/* Overlay with theme-aware background */}
       <div
         className="fixed inset-0"
-        style={{
-          backgroundColor: `${theme.card}CC`, // 80% opacity with theme card color
-        }}
+       
         aria-hidden="true"
       />
       <div className="fixed inset-0 z-10 flex items-center justify-center p-2 sm:p-4 overflow-y-auto">
         <Dialog.Panel
           as="div"
           className="w-full max-w-4xl transform overflow-hidden rounded-2xl p-0 text-left align-middle shadow-xl transition-all"
-          style={{ backgroundColor: theme.card }}
         >
           <Card>
             <div className="flex justify-between items-start">

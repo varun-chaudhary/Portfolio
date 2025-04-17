@@ -227,3 +227,21 @@ export const certificates = [
   },
   // Add more certificates as needed
 ];
+
+export const experience = [
+  {
+    id: 1,
+    company: "Your Company Name",
+    logo: "https://example.com/company-logo.png",
+    role: "Your Role",
+    duration: "Start Date - End Date",
+    description: "A detailed description of your role, responsibilities, and achievements. Highlight key projects and contributions. Keep it concise but impactful.",
+    skills: [
+      "Skill 1",
+      "Skill 2",
+      "Skill 3",
+      "Skill 4",
+      "Skill 5"
+    ]
+  }
+];

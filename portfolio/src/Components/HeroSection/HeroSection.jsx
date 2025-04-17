@@ -1,15 +1,12 @@
 import React, { Suspense, useEffect, useState } from "react";
-import Typewriter from "typewriter-effect";
 import image from "../../assets/img/hero_img.png";
 import { Bio } from "../../data/constants";
 import {
   HeroContainer,
   HeroInnerContainer,
   ResumeButton,
-  Span,
   SubTitle,
-  TextLoop,
-  Title,
+  Title
 } from "./HeroStyle";
 
 const LazySpline = React.lazy(() => import("@splinetool/react-spline"));
@@ -46,7 +43,7 @@ const HeroSection = () => {
               <Title>
                 Hi, I am <br /> {Bio.name}
               </Title>
-              <TextLoop className="flex flex-wrap">
+              {/* <TextLoop className="flex flex-wrap">
                 I am a
                 <Span className="glow">
                   <Typewriter
@@ -57,7 +54,7 @@ const HeroSection = () => {
                     }}
                   />
                 </Span>
-              </TextLoop>
+              </TextLoop> */}
 
               <SubTitle
                 className="text-justify"
@@ -70,7 +67,7 @@ const HeroSection = () => {
                 }`}
               >
                 <ResumeButton href={Bio.resume} target="display">
-                  Check Resume
+                  Resume
                 </ResumeButton>
               </div>
             </div>

@@ -5,6 +5,7 @@ import "./App.css";
 import Certificates from './Components/Certificates/Certificates';
 import Contact from "./Components/Contact/Contact";
 import Education from "./Components/Education/Education";
+import Experience from './Components/Experience/Experience';
 import Footer from "./Components/Footer/Footer";
 import HeroSection from "./Components/HeroSection/HeroSection";
 import Navbar from "./Components/Navbar/Navbar";
@@ -62,6 +63,7 @@ function App() {
             <Wrapper>
               <HeroSection />
               <Skills />
+              <Experience />
               <Project />
               <Certificates />
               <Education darkMode={darkMode} />
