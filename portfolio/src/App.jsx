@@ -2,6 +2,7 @@ import { useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import styled, { ThemeProvider } from "styled-components";
 import "./App.css";
+import Certificates from './Components/Certificates/Certificates';
 import Contact from "./Components/Contact/Contact";
 import Education from "./Components/Education/Education";
 import Footer from "./Components/Footer/Footer";
@@ -62,9 +63,10 @@ function App() {
               <HeroSection />
               <Skills />
               <Project />
+              <Certificates />
               <Education darkMode={darkMode} />
             </Wrapper>
-              <Contact />
+            <Contact />
             <Footer darkMode={darkMode} />
           </Body>
         </Router>

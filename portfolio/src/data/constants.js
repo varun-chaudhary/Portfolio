@@ -205,3 +205,25 @@ export const TimeLineData = [
   { year: 2020, text: "Shared my projects with the world" },
   { year: 2021, text: "Started my own platform" },
 ];
+
+export const certificates = [
+  {
+    id: 1,
+    title: "Certificate 1",
+    date: "Jan 2024",
+    image: "https://example.com/cert1.jpg",
+  },
+  {
+    id: 2,
+    title: "Certificate 2",
+    date: "Feb 2024",
+    image: "https://example.com/cert2.jpg",
+  },
+  {
+    id: 3,
+    title: "Certificate 3",
+    date: "Mar 2024",
+    image: "https://example.com/cert3.jpg",
+  },
+  // Add more certificates as needed
+];
