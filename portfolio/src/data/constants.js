@@ -183,7 +183,7 @@ export const projects = [
     description:
       "StrideSync is an Android application that tracks your steps, calories burned, and distance covered. It also provides a settings screen where users can view and edit their profile information.",
 
-    image: "",
+    image: ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUPIfiGgUML8G3ZqsNLHfaCnZK3I5g4tJabQ&s","https://static.vecteezy.com/system/resources/thumbnails/036/324/708/small/ai-generated-picture-of-a-tiger-walking-in-the-forest-photo.jpg"],
     tags: [
       "Android Studio",
       "Servince",

@@ -1,13 +1,13 @@
-import { Button, Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
+import { Button, Dialog, DialogPanel } from '@headlessui/react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import Slider from 'react-slick'
+import "slick-carousel/slick/slick-theme.css"
+import "slick-carousel/slick/slick.css"
 import styled from 'styled-components'
 
-
-
 const Card = styled.div`
-   
-    background-color: ${({ theme }) => theme.card - 10};
+    background-color: ${({ theme }) => theme.card};
     border-radius: 10px;
     box-shadow: 0 0 12px 4px rgba(0,0,0,0.4);
     overflow: hidden;
@@ -15,7 +15,40 @@ const Card = styled.div`
     display: flex;
     flex-direction: column;
     gap: 14px;
-   
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+`
+
+const StyledSlider = styled(Slider)`
+    .slick-prev,
+    .slick-next {
+        z-index: 1;
+        width: 40px;
+        height: 40px;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        &:before {
+            font-size: 20px;
+        }
+    }
+    .slick-prev {
+        left: 10px;
+    }
+    .slick-next {
+        right: 10px;
+    }
+`
+
+const CarouselImage = styled.img`
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 0 16px 2px rgba(0,0,0,0.3);
+    background-color: ${({ theme }) => theme.white};
 `
 
 const Image = styled.img`
@@ -101,72 +134,79 @@ const Avatar = styled.img`
 `
 
 export default function ProjectModal({ project, close, isOpen }) {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    beforeChange: (current, next) => setCurrentSlide(next),
+  };
 
   return (
-    <>
-
-
-      <Dialog open={isOpen} as="div" className="relative z-10 focus:outline-none" onClose={close}>
-        <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
-          <div className="flex min-h-full items-center justify-center p-4">
-            <DialogPanel
-              transition
-              className="w-full max-w-md rounded-xl bg-white/5 p-6 backdrop-blur-2xl duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
-            >
-              <Card>
-
-                <Title>
-                  <div className='flex'>
-                    <div>
-                      {project.title}
-                      <Date>
-                        {project.date}
-                      </Date>
-                    </div>
-
-                    <div className="mx-auto mr-0">
-                      
-                      <Button
-                        className="inline-flex items-center gap-2 rounded-md py-1.5 px-3 text-sm/6 font-semibold  shadow-inner shadow-white/10 focus:outline-none data-[hover]:bg-red-600 data-[focus]:outline-1  data-[open]:bg-gray-700"
-                        onClick={close}
-                      >
-                        X
-                      </Button>
-                    </div>
+    <Dialog open={isOpen} as="div" className="relative z-10 focus:outline-none" onClose={close}>
+      <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+        <div className="flex min-h-full items-center justify-center p-4">
+          <DialogPanel
+            transition
+            className="w-[800px] rounded-xl bg-white/90 p-0 backdrop-blur-2xl duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
+          >
+            <Card>
+              <Title>
+                <div className='flex justify-between items-center'>
+                  <div>
+                    {project.title}
+                    <Date>
+                      {project.date}
+                    </Date>
                   </div>
-                </Title>
+                  <Button
+                    className="inline-flex items-center gap-2 rounded-md py-1.5 px-3 text-sm/6 font-semibold shadow-inner shadow-white/10 focus:outline-none data-[hover]:bg-red-600 data-[focus]:outline-1 data-[open]:bg-gray-700"
+                    onClick={close}
+                  >
+                    X
+                  </Button>
+                </div>
+              </Title>
 
-                <Image src={project.image}  className={project.category === 'android app' ? 'h-80 object-contain' : ''}/>
-                <Description className='text-justify'>
-                  {project.description}
+              <StyledSlider {...settings}>
+                {project.image?.map((image, index) => (
+                  <div key={index}>
+                    <CarouselImage src={image} alt={`${project.title} - Image ${index + 1}`} />
+                  </div>
+                ))}
+              </StyledSlider>
+
+              <Description className='text-justify'>
+                {project.description}
+              </Description>
+
+              <Tags>
+                {project.tags?.map((tag, index) => (
+                  <Tag key={index}>{tag}</Tag>
+                ))}
+              </Tags>
+
+              <Link to={project.github} target='_blank'>
+                <Description className='underline decoration-4 hover:decoration-sky-400'>
+                  GitHub Link 👆
                 </Description>
-
-                <Tags>
-                  {project.tags?.map((tag, index) => (
-                    <Tag key={index} >{tag}</Tag>
-                  ))}
-                </Tags>
-
-                <Link to={project.github} target='_blank'>
+              </Link>
+              {project.webapp && (
+                <Link to={project.webapp} target='_blank'>
                   <Description className='underline decoration-4 hover:decoration-sky-400'>
-                    GitHub Link 👆
+                    Deployed Link 👆
                   </Description>
                 </Link>
-                {
-                  project.webapp &&
-                  <Link to={project.webapp} target='_blank'>
-                    <Description className='underline decoration-4 hover:decoration-sky-400'>
-                      Deployed Link. 👆
-                    </Description>
-                  </Link>
-                }
-
-              </Card>
-
-            </DialogPanel>
-          </div>
+              )}
+            </Card>
+          </DialogPanel>
         </div>
-      </Dialog>
-    </>
+      </div>
+    </Dialog>
   )
 }

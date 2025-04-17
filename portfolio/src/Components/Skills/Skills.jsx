@@ -64,6 +64,11 @@ const Skill = styled.div`
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
   border-radius: 16px;
   padding: 18px 36px;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(23, 92, 230, 0.3) 0px 4px 24px;
+  }
   @media (max-width: 768px) {
     max-width: 400px;
     padding: 10px 36px;
@@ -130,7 +135,7 @@ const Skills = () => {
               <SkillList key={index}>
                 {skill.skills.map((item, idx) => (
                   <SkillItem key={idx}>
-                    <SkillImage src={item.image}/>
+                    <SkillImage src={item.image} />
                     {item.name}
                   </SkillItem>
                 ))}
