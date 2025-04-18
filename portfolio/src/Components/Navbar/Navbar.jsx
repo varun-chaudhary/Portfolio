@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import DarkModeToggle from "react-dark-mode-toggle";
-import { DiFsharp } from "react-icons/di";
 import { FaBars } from 'react-icons/fa';
 import { useTheme } from 'styled-components';
 import { Bio } from '../../data/constants';
 import { ButtonContainer, GitHubButton, MobileIcon, MobileLink, MobileMenu, Nav, NavItems, NavLink, NavLogo, NavbarContainer, Span } from './NavbarStyledComponent';
+
+import { MdWavingHand } from 'react-icons/md';
 
 const Navbar = ({ toggleTheme }) => {
   const [enabled, setEnabled] = useState(false);
@@ -57,7 +58,8 @@ const Navbar = ({ toggleTheme }) => {
       <NavbarContainer>
         <NavLogo to='/'>
           <div className='hover:animate-pulse' style={{ display: "flex", alignItems: "center", color: theme.primary, marginBottom: '20', cursor: 'pointer' }}>
-            <DiFsharp size="3rem" /> <Span>Portfolio</Span>
+          <MdWavingHand size="2rem" /> <Span>Varun</Span>
+            
           </div>
         </NavLogo>
 

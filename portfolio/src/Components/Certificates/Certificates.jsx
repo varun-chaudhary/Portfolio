@@ -15,7 +15,7 @@ const Container = styled.div`
   align-items: center;
   padding: 40px 0;
   min-height: fit-content;
-  scroll-margin-top: 60px;
+  scroll-margin-top: 30px;
   @media (max-width: 768px) {
     padding: 20px 0;
     scroll-margin-top: 40px;
