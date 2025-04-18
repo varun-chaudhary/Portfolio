@@ -1,6 +1,5 @@
 import { Link as LinkR } from 'react-router-dom';
 import styled from 'styled-components';
-import _default from '../../themes/default';
 
 export const Nav = styled.div`
      background-color: ${({ theme, isAtTop }) => isAtTop ? theme.card_light : `${theme.card_light}99`};
@@ -65,14 +64,32 @@ export const NavLink = styled.a`
     color: ${({ theme }) => theme.text_primary};
     font-weight: 500;
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
     text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    position: relative;
+    
     :hover {
       color: ${({ theme }) => theme.primary};
+      background: ${({ theme }) => theme.primary + 20};
+      transform: translateY(-2px);
     }
 
     &.active {
-      border-bottom: 2px solid ${({ theme }) => theme.primary};
+      color: ${({ theme }) => theme.primary};
+      background: ${({ theme }) => theme.primary + 20};
+      transform: translateY(-2px);
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: ${({ theme }) => theme.primary};
+        box-shadow: 0 0 10px ${({ theme }) => theme.primary};
+      }
     }
 `;
 
@@ -137,7 +154,7 @@ export const MobileMenu = styled.div`
     right: 0;
     width: 100%;
     padding: 12px 40px 24px 40px;
-    background: ${({ theme }) => theme.card_light+99};
+    background: ${({ theme }) => theme.card_light + 99};
     transition: all 0.6s ease-in-out;
     transform: ${({ isOpen }) => (isOpen ? 'translateY(0)' : 'translateY(-100%)')};
     border-radius: 0 0 20px 20px;
@@ -194,18 +211,38 @@ export const MobileMenuButton = styled.a`
   }
 `;
 
-export  const MobileLink = styled.a`
+export const MobileLink = styled.a`
   color: ${({ theme }) => theme.text_primary};
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
   text-decoration: none;
+  padding: 12px 16px;
+  border-radius: 8px;
+  width: 100%;
+  text-align: center;
+  margin: 4px 0;
+  
   :hover {
     color: ${({ theme }) => theme.primary};
+    background: ${({ theme }) => theme.primary + 20};
+    transform: translateY(-2px);
   }
 
   &.active {
-    border-bottom: 2px solid ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.primary};
+    background: ${({ theme }) => theme.primary + 20};
+    transform: translateY(-2px);
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: ${({ theme }) => theme.primary};
+      box-shadow: 0 0 10px ${({ theme }) => theme.primary};
+    }
   }
 `;
 
