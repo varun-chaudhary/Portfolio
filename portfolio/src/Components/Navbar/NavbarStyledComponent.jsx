@@ -126,6 +126,29 @@ export const ButtonContainer = styled.div`
   justify-content: flex-end;
   align-items: center;
   padding: 0 6px;
+  position: relative;
+
+  a {
+    position: relative;
+    cursor: pointer;
+    
+    &:hover::after {
+      content: attr(title);
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: ${({ theme }) => theme.card_light};
+      color: ${({ theme }) => theme.text_primary};
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+      white-space: nowrap;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+  }
+
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -164,7 +187,29 @@ export const MobileMenu = styled.div`
     opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
     z-index: ${({ isOpen }) => (isOpen ? '1000' : '-1000')};
 
-`
+    div {
+      a {
+        position: relative;
+        cursor: pointer;
+        
+        &:hover::after {
+          content: attr(title);
+          position: absolute;
+          bottom: -30px;
+          left: 50%;
+          transform: translateX(-50%);
+          background: ${({ theme }) => theme.card_light};
+          color: ${({ theme }) => theme.text_primary};
+          padding: 5px 10px;
+          border-radius: 5px;
+          font-size: 14px;
+          white-space: nowrap;
+          z-index: 1000;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+      }
+    }
+`;
 
 export const MobileMenuItems = styled.ul`
   display: flex;

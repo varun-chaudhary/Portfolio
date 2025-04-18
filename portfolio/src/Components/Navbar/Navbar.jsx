@@ -100,19 +100,19 @@ const Navbar = ({ toggleTheme }) => {
         </NavItems>
 
         <ButtonContainer>
-          <a href={Bio.github} target="_blank" rel="noopener noreferrer" style={{ marginRight: '20px', color: theme.primary }}>
+          <a href={Bio.github} target="_blank" rel="noopener noreferrer" style={{ marginRight: '20px', color: theme.primary }} title="GitHub">
             <FaGithub size={30} />
           </a>
-          <a href={Bio.linkedin} target="_blank" rel="noopener noreferrer" style={{ marginRight: '20px', color: theme.primary }}>
+          <a href={Bio.linkedin} target="_blank" rel="noopener noreferrer" style={{ marginRight: '20px', color: theme.primary }} title="LinkedIn">
             <FaLinkedin size={30} />
           </a>
-          <a href={`mailto:${Bio.email}`} target="_blank" rel="noopener noreferrer" style={{ marginRight: '20px', color: theme.primary }}>
+          <a href={`mailto:${Bio.email}`} target="_blank" rel="noopener noreferrer" style={{ marginRight: '20px', color: theme.primary }} title="Email">
             <FaEnvelope size={30} />
           </a>
-          <a href={Bio.leetcode} target="_blank" rel="noopener noreferrer" style={{ marginRight: '20px', color: theme.primary }}>
+          <a href={Bio.leetcode} target="_blank" rel="noopener noreferrer" style={{ marginRight: '20px', color: theme.primary }} title="LeetCode">
             <FaCode size={30} />
           </a>
-          <a href={Bio.resume} target="_blank" rel="noopener noreferrer" style={{ color: theme.primary }}>
+          <a href={Bio.resume} target="_blank" rel="noopener noreferrer" style={{ color: theme.primary }} title="Resume">
             <FaFileAlt size={30} />
           </a>
         </ButtonContainer>
@@ -127,19 +127,19 @@ const Navbar = ({ toggleTheme }) => {
             <MobileLink href='#education' className={activeSection === 'education' ? 'active' : ''} onClick={() => setIsOpen(false)}>Education</MobileLink>
 
             <div style={{ display: 'flex', gap: '1.5rem', marginTop: '1rem' }}>
-              <a href={Bio.github} target="_blank" rel="noopener noreferrer" style={{ color: theme.primary }}>
+              <a href={Bio.github} target="_blank" rel="noopener noreferrer" style={{ color: theme.primary }} title="GitHub">
                 <FaGithub size={25} />
               </a>
-              <a href={Bio.linkedin} target="_blank" rel="noopener noreferrer" style={{ color: theme.primary }}>
+              <a href={Bio.linkedin} target="_blank" rel="noopener noreferrer" style={{ color: theme.primary }} title="LinkedIn">
                 <FaLinkedin size={25} />
               </a>
-              <a href={`mailto:${Bio.email}`} target="_blank" rel="noopener noreferrer" style={{ color: theme.primary }}>
+              <a href={`mailto:${Bio.email}`} target="_blank" rel="noopener noreferrer" style={{ color: theme.primary }} title="Email">
                 <FaEnvelope size={25} />
               </a>
-              <a href={Bio.leetcode} target="_blank" rel="noopener noreferrer" style={{ color: theme.primary }}>
+              <a href={Bio.leetcode} target="_blank" rel="noopener noreferrer" style={{ color: theme.primary }} title="LeetCode">
                 <FaCode size={25} />
               </a>
-              <a href={Bio.resume} target="_blank" rel="noopener noreferrer" style={{ color: theme.primary }}>
+              <a href={Bio.resume} target="_blank" rel="noopener noreferrer" style={{ color: theme.primary }} title="Resume">
                 <FaFileAlt size={25} />
               </a>
             </div>
