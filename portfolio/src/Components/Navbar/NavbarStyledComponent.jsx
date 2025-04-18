@@ -1,6 +1,27 @@
 import { Link as LinkR } from 'react-router-dom';
 import styled from 'styled-components';
 
+import { keyframes } from "styled-components";
+
+const wave = keyframes`
+  0% { transform: rotate(0deg); }
+  15% { transform: rotate(14deg); }
+  30% { transform: rotate(-8deg); }
+  40% { transform: rotate(14deg); }
+  50% { transform: rotate(-4deg); }
+  60% { transform: rotate(10deg); }
+  70% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+`;
+
+export const WavingHand = styled.span`
+  display: inline-block;
+  transform-origin: 70% 70%;
+  &:hover {
+    animation: ${wave} 1s ease-in-out;
+  }
+`;
+
 export const Nav = styled.div`
     background-color: ${({ theme, isAtTop }) => isAtTop ? theme.card_light : `${theme.card_light}dd`};
     height: 80px;

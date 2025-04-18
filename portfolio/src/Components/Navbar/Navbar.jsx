@@ -14,7 +14,8 @@ import {
   NavLink,
   NavLogo,
   NavbarContainer,
-  Span
+  Span,
+  WavingHand
 } from './NavbarStyledComponent';
 
 const Navbar = ({ toggleTheme }) => {
@@ -66,7 +67,8 @@ const Navbar = ({ toggleTheme }) => {
             className='hover:animate-pulse'
             style={{ display: "flex", alignItems: "center", color: theme.primary, marginBottom: '20', cursor: 'pointer' }}
           >
-            <MdWavingHand size="2rem" /> <Span>Varun</Span>
+            <WavingHand> <MdWavingHand size="2rem" /> </WavingHand>
+             <Span>Varun</Span>
           </div>
         </NavLogo>
 
