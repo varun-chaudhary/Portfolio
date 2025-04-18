@@ -3,12 +3,20 @@ import styled from 'styled-components'
 import { skills } from '../../data/constants'
 
 const Container = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: center;
-position: relative;
-z-index: 1;
-align-items: center;
+  background: linear-gradient(343.07deg, rgba(132, 59, 206, 0.06) 5.71%, rgba(132, 59, 206, 0) 64.83%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  align-items: center;
+  padding: 40px 0;
+  min-height: fit-content;
+  scroll-margin-top: 50px;
+  @media (max-width: 768px) {
+    padding: 20px 0;
+    scroll-margin-top: 60px;
+  }
 `
 
 const Wrapper = styled.div`

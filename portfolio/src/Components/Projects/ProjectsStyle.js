@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import _default from '../../themes/default';
 
 export const Container = styled.div`
     background: linear-gradient(343.07deg, rgba(132, 59, 206, 0.06) 5.71%, rgba(132, 59, 206, 0) 64.83%);
@@ -9,6 +8,13 @@ export const Container = styled.div`
     position: relative;
     z-index: 1;
     align-items: center;
+    padding: 40px 0;
+    min-height: fit-content;
+    scroll-margin-top: 60px;
+    @media (max-width: 768px) {
+        padding: 20px 0;
+        scroll-margin-top: 40px;
+    }
 `;
 
 export const Wrapper = styled.div`

@@ -14,7 +14,12 @@ const Container = styled.div`
   z-index: 1;
   align-items: center;
   padding: 40px 0;
-  min-height: 100vh;
+  min-height: fit-content;
+  scroll-margin-top: 60px;
+  @media (max-width: 768px) {
+    padding: 20px 0;
+    scroll-margin-top: 40px;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -25,8 +30,11 @@ const Wrapper = styled.div`
   flex-direction: column;
   width: 100%;
   max-width: 1350px;
-  padding: 10px 0px 100px 0;
+  padding: 10px 0px 50px 0;
   gap: 12px;
+  @media (max-width: 768px) {
+    padding: 10px 0px 30px 0;
+  }
 `;
 
 const Title = styled.div`
@@ -61,12 +69,12 @@ const StyledSlider = styled(Slider)`
     align-items: center;
   }
   .slick-slide {
-    transition: transform 0.5s ease;
+    transition: transform 0.3s ease;
     padding: 0 20px;
     transform: scale(0.8);
   }
   .slick-center {
-    transform: scale(0.95);
+    transform: scale(1.2);
     z-index: 1;
   }
   .slick-prev,
@@ -79,6 +87,9 @@ const StyledSlider = styled(Slider)`
     &:before {
       font-size: 24px;
     }
+    @media (max-width: 768px) {
+      display: none !important;
+    }
   }
   .slick-prev {
     left: 20px;
@@ -89,13 +100,12 @@ const StyledSlider = styled(Slider)`
 `;
 
 const CertificateCard = styled.div`
-  background: ${({ theme }) => theme.card};
+  background: transparent;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  padding: 30px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
   transition: all 0.3s ease;
   cursor: grab;
   &:active {
@@ -108,11 +118,18 @@ const CertificateCard = styled.div`
 
 const CertificateImage = styled.img`
   width: 100%;
-  height: 70vh;
+  height: 50vh;
+  max-height: 500px;
   border-radius: 10px;
   object-fit: contain;
   box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.2);
   background-color: ${({ theme }) => theme.white};
+  border: 2px solid ${({ theme }) => theme.text_primary};
+  @media (max-width: 768px) {
+    height: 40vh;
+    max-height: 400px;
+    object-fit: contain;
+  }
 `;
 
 const CertificateTitle = styled.div`
@@ -137,10 +154,11 @@ const Certificates = () => {
     slidesToScroll: 1,
     centerMode: true,
     centerPadding: "15%",
+    focusOnSelect: true,
     autoplay: false,
     draggable: true,
     swipeToSlide: true,
-    focusOnSelect: true,
+    arrows: false,
     responsive: [
       {
         breakpoint: 1024,

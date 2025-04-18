@@ -1,23 +1,26 @@
-
-import React, { useEffect } from 'react'
-import styled from 'styled-components'
-import { education } from '../../data/constants';
+import React from 'react';
+import { FaStar } from "react-icons/fa6";
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { FaStar } from "react-icons/fa6";
+import styled from 'styled-components';
+import { education } from '../../data/constants';
 
 
 const Container = styled.div`
+    background: linear-gradient(343.07deg, rgba(132, 59, 206, 0.06) 5.71%, rgba(132, 59, 206, 0) 64.83%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
     z-index: 1;
     align-items: center;
-    padding: 0px 0px 60px 0px;
-    @media (max-width: 960px) {
-        padding: 0px;
-    }
+  padding: 40px 0;
+  min-height: fit-content;
+  scroll-margin-top: 50px;
+  @media (max-width: 768px) {
+    padding: 20px 0;
+    scroll-margin-top: 60px;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -172,17 +175,17 @@ const Education = ({ darkmode }) => {
                         education.map(element => {
                             return (
                                 <VerticalTimelineElement
-                                    contentArrowStyle={{ borderRight: '7px solid #ff5733',  }}
+                                    contentArrowStyle={{ borderRight: '7px solid #ff5733', }}
                                     contentStyle={{ padding: 0, background: 'transparent', transition: "all 0.3 ease-in-out", hover: " transform: translateY(-5px)" }} // Remove default padding
                                     key={element.id}
                                     date={<Date>{element.date}</Date>}
                                     iconClassName={"bg-white"}
                                     icon={<img src={element.img} className='rounded-full bg-white' />}
-                                    
+
                                 >
                                     <Card>
                                         <Top>
-                                            <Image src={element.img}/>
+                                            <Image src={element.img} />
                                             <Body>
                                                 <Name>{element.school}</Name>
                                                 <Degree>{element.degree}</Degree>
