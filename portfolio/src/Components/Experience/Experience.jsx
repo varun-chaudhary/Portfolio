@@ -11,6 +11,9 @@ const Container = styled.div`
   z-index: 1;
   align-items: center;
   padding: 40px 20px;
+  @media (max-width: 768px) {
+    padding: 40px 10px;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -23,6 +26,9 @@ const Wrapper = styled.div`
   max-width: 1350px;
   padding: 10px 0px 100px 0;
   gap: 12px;
+  @media (max-width: 768px) {
+    padding: 10px 10px 50px 10px;
+  }
 `;
 
 const Title = styled.div`
