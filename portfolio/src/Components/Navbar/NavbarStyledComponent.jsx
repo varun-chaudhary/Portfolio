@@ -29,6 +29,7 @@ export const NavbarContainer = styled.div`
   width: 100%;
   padding: 0 24px;
   max-width: 1200px;
+  gap: 20px;
 `;
 
 export const NavLogo = styled(LinkR)`
@@ -51,8 +52,8 @@ export const NavItems = styled.ul`
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content:center;
-    gap: 32px;
+    justify-content: flex-end;
+    gap: 40px;
     padding: 0 6px;
     list-style: none;
 
@@ -119,10 +120,10 @@ export const GitHubButton = styled.a`
 `;
 
 export const ButtonContainer = styled.div`
-  width: 80%;  
+  width: auto;  
   height: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   padding: 0 6px;
   @media screen and (max-width: 768px) {

@@ -11,6 +11,7 @@ export const Bio = {
   github: "https://github.com/varun-chaudhary",
   resume: "#",
   linkedin: "https://www.linkedin.com/in/varunchaudharycse/",
+  leetcode: "https://leetcode.com/varunc105/",
 };
 
 export const skills = [
@@ -183,7 +184,10 @@ export const projects = [
     description:
       "StrideSync is an Android application that tracks your steps, calories burned, and distance covered. It also provides a settings screen where users can view and edit their profile information.",
 
-    image: ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUPIfiGgUML8G3ZqsNLHfaCnZK3I5g4tJabQ&s","https://static.vecteezy.com/system/resources/thumbnails/036/324/708/small/ai-generated-picture-of-a-tiger-walking-in-the-forest-photo.jpg"],
+    image: [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUPIfiGgUML8G3ZqsNLHfaCnZK3I5g4tJabQ&s",
+      "https://static.vecteezy.com/system/resources/thumbnails/036/324/708/small/ai-generated-picture-of-a-tiger-walking-in-the-forest-photo.jpg",
+    ],
     tags: [
       "Android Studio",
       "Servince",
@@ -235,13 +239,8 @@ export const experience = [
     logo: "https://example.com/company-logo.png",
     role: "Your Role",
     duration: "Start Date - End Date",
-    description: "A detailed description of your role, responsibilities, and achievements. Highlight key projects and contributions. Keep it concise but impactful.",
-    skills: [
-      "Skill 1",
-      "Skill 2",
-      "Skill 3",
-      "Skill 4",
-      "Skill 5"
-    ]
-  }
+    description:
+      "A detailed description of your role, responsibilities, and achievements. Highlight key projects and contributions. Keep it concise but impactful.",
+    skills: ["Skill 1", "Skill 2", "Skill 3", "Skill 4", "Skill 5"],
+  },
 ];
