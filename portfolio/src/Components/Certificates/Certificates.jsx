@@ -61,11 +61,12 @@ const StyledSlider = styled(Slider)`
     align-items: center;
   }
   .slick-slide {
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
     padding: 0 20px;
+    transform: scale(0.8);
   }
   .slick-center {
-    transform: scale(1);
+    transform: scale(0.95);
     z-index: 1;
   }
   .slick-prev,

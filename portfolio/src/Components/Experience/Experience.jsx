@@ -10,7 +10,7 @@ const Container = styled.div`
   position: relative;
   z-index: 1;
   align-items: center;
-  padding: 40px 0;
+  padding: 40px 20px;
 `;
 
 const Wrapper = styled.div`
@@ -64,19 +64,14 @@ const ExperienceCard = styled.div`
   transition: all 0.3s ease-in-out;
   border: 0.1px solid #854CE6;
 
+  @media (max-width: 768px) {
+    padding: 20px;
+    margin: 0 10px;
+  }
+
   &:hover {
     transform: scale(1.05);
     box-shadow: rgba(23, 92, 230, 0.3) 0px 4px 24px;
-  }
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 4px;
-    height: 100%;
-    background: ${({ theme }) => theme.primary};
   }
 `;
 
@@ -158,4 +153,4 @@ const Experience = () => {
   );
 };
 
-export default Experience; 
+export default Experience;
