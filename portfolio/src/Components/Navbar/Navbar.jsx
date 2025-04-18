@@ -58,8 +58,8 @@ const Navbar = ({ toggleTheme }) => {
       <NavbarContainer>
         <NavLogo to='/'>
           <div className='hover:animate-pulse' style={{ display: "flex", alignItems: "center", color: theme.primary, marginBottom: '20', cursor: 'pointer' }}>
-          <MdWavingHand size="2rem" /> <Span>Varun</Span>
-            
+            <MdWavingHand size="2rem" /> <Span>Varun</Span>
+
           </div>
         </NavLogo>
 
