@@ -38,7 +38,7 @@ const HeroSection = () => {
           <div className="grid lg:grid-cols-2 sm:grid-cols-1 lg:gap-32 mt-16 md:mt-20 lg:mt-0">
             <div
               id="Left"
-              className="order-2 justify-center mt-60 md:mt-40 lg:mt-5"
+              className="order-2 justify-center mt-6 md:mt-40 lg:mt-5"
             >
               <Title>
                 Hi, I am <br /> {Bio.name}
