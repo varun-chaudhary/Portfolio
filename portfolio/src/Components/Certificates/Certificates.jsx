@@ -12,7 +12,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   padding: 40px 0;
-  scroll-margin-top: 30px;
+  scroll-margin-top: 10px;
   min-height: fit-content;
   position: relative;
   z-index: 1;
@@ -109,8 +109,6 @@ const StyledSlider = styled(Slider)`
 `;
 
 const CardContainer = styled.div`
-  background: ${({ theme }) =>
-    `linear-gradient(135deg, ${theme.card_gradient_start} 0%, ${theme.card_gradient_end} 100%)`};
   padding: 5px;
   border-radius: 18px;
   display: flex;
@@ -122,17 +120,19 @@ const CardContainer = styled.div`
 `;
 
 const CertificateCard = styled.div`
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
   padding: 20px;
+  margin: 20px auto;
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 5px;
   cursor: grab;
   transition: transform 0.3s ease;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 
   &:active {
     cursor: grabbing;
@@ -140,6 +140,7 @@ const CertificateCard = styled.div`
 
   &:hover {
     transform: scale(1.02);
+    background: rgba(255, 255, 255, 0.15);
   }
 `;
 
@@ -149,9 +150,12 @@ const CertificateImage = styled.img`
   max-height: 500px;
   object-fit: contain;
   border-radius: 10px;
-  border: 2px solid ${({ theme }) => theme.text_primary};
-  background-color: ${({ theme }) => theme.white};
-  box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  opacity: 0.95;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 
   @media (max-width: 768px) {
     height: 40vh;

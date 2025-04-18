@@ -213,21 +213,31 @@ export const TimeLineData = [
 export const certificates = [
   {
     id: 1,
-    title: "Certificate 1",
-    date: "Jan 2024",
-    image: "https://example.com/cert1.jpg",
+    title: "NPTEL - Programming in Java",
+    date: "May 2023",
+    image:
+      "https://github.com/varun-chaudhary/Sources/raw/c08dc47bf77990a9d2a31b915695349c7b1ff4eb/Certificates/NPTEL23CS49S6380048204315522.jpg",
   },
   {
     id: 2,
-    title: "Certificate 2",
-    date: "Feb 2024",
-    image: "https://example.com/cert2.jpg",
+    title: "Oracle Cloud Infrastructure Foundations Associate",
+    date: "Aug 2023",
+    image:
+      "https://github.com/varun-chaudhary/Sources/raw/main/Certificates/OracleCloud.png",
   },
   {
     id: 3,
-    title: "Certificate 3",
-    date: "Mar 2024",
-    image: "https://example.com/cert3.jpg",
+    title: "Divide and Conquer",
+    date: "May 2022",
+    image:
+      "https://github.com/varun-chaudhary/Sources/raw/main/Certificates/divideandconquer.png",
+  },
+  {
+    id: 4,
+    title: "Introduction to Hardware and Operating Systems",
+    date: "June 2022",
+    image:
+      "https://github.com/varun-chaudhary/Sources/raw/main/Certificates/os.png",
   },
   // Add more certificates as needed
 ];
