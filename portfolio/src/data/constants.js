@@ -197,8 +197,9 @@ export const projects = [
       "SQL",
     ],
     category: "android app",
-    github: "",
-    webapp: "",
+    github: "sfs",
+    webapp: "dsfs",
+    youtube: "dsfs",
   },
 ];
 

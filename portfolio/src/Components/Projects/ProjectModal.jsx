@@ -1,5 +1,6 @@
 import { Dialog } from '@headlessui/react'
 import { useState } from 'react'
+import { FaExternalLinkAlt, FaGithub, FaYoutube } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick-theme.css'
@@ -8,7 +9,7 @@ import styled, { useTheme } from 'styled-components'
 
 const Card = styled.div`
 background: ${({ theme }) =>
-  `linear-gradient(145deg, ${theme.card_light}, ${theme.bgLight}, rgba(255, 255, 255, 0.05))`};
+  `linear-gradient(45deg, ${theme.card_light}, ${theme.bgLight}, rgba(255, 255, 255, 0.05))`};
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   padding: 30px 24px;
@@ -83,21 +84,7 @@ const Tag = styled.span`
   border-radius: 10px;
 `
 
-const Title = styled.div`
-  font-size: 20px;
-  font-weight: 600;
-  color: ${({ theme }) => theme.text_secondary};
-  overflow: hidden;
-  display: -webkit-box;
-  max-width: 100%;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
 
-  @media (min-width: 768px) {
-    font-size: 22px;
-  }
-`
 
 const Date = styled.div`
   font-size: 13px;
@@ -122,14 +109,30 @@ const Description = styled.div`
   }
 `
 
-const Avatar = styled.img`
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  margin-left: -10px;
-  background-color: ${({ theme }) => theme.white};
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  border: 3px solid ${({ theme }) => theme.card};
+const LinkRow = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+`
+
+const StyledLink = styled(Link)`
+  font-size: 15px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.text_secondary};
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+
+  &:hover {
+    color: ${({ theme }) => theme.primary};
+    text-decoration: underline;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
 `
 
 const CloseButton = styled.button`
@@ -149,6 +152,78 @@ const CloseButton = styled.button`
     color: ${({ theme }) => theme.primary};
   }
 `
+const HeaderRow = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 12px;
+`
+
+const TitleWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 16px;
+`
+
+const Title = styled.div`
+  font-size: 20px;
+  font-weight: 600;
+  color: ${({ theme }) => theme.text_secondary};
+  overflow: hidden;
+  display: -webkit-box;
+  max-width: 100%;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+
+  @media (min-width: 768px) {
+    font-size: 22px;
+  }
+`
+
+const TopIcons = styled.div`
+  display: flex;
+  gap: 12px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  a {
+    font-size: 24px;
+    color: ${({ theme }) => theme.text_secondary};
+    transition: color 0.3s;
+    position: relative;
+
+    &:hover {
+      color: ${({ theme }) => theme.primary};
+    }
+
+    &::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: -28px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: ${({ theme }) => theme.bgLight};
+      color: ${({ theme }) => theme.text_primary};
+      padding: 4px 8px;
+      font-size: 12px;
+      white-space: nowrap;
+      border-radius: 6px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s, bottom 0.3s;
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    &:hover::after {
+      opacity: 1;
+      bottom: -34px;
+    }
+  }
+`
+
 
 export default function ProjectModal({ project, close, isOpen }) {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -167,27 +242,41 @@ export default function ProjectModal({ project, close, isOpen }) {
 
   return (
     <Dialog open={isOpen} onClose={close} className="relative z-10">
-      <div
-        className="fixed inset-0"
-       
-        aria-hidden="true"
-      />
+      <div className="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm" aria-hidden="true" />
+
       <div className="fixed inset-0 z-10 flex items-center justify-center p-2 sm:p-4 overflow-y-auto">
         <Dialog.Panel
           as="div"
           className="w-full max-w-4xl transform overflow-hidden rounded-2xl p-0 text-left align-middle shadow-xl transition-all"
         >
           <Card>
-            <div className="flex justify-between items-start">
-              <div>
+            <HeaderRow>
+              <TitleWrapper>
                 <Title>{project.title}</Title>
-                <Date>{project.date}</Date>
-              </div>
-              <CloseButton onClick={close} aria-label="Close modal">
-                ×
-              </CloseButton>
-            </div>
+              </TitleWrapper>
+              
+              <Date>{project.date}</Date>
 
+              <TopIcons>
+                {project.github && (
+                  <a href={project.github} target="_blank" rel="noopener noreferrer" data-tooltip="GitHub Repo">
+                    <FaGithub />
+                  </a>
+                )}
+                {project.webapp && (
+                  <a href={project.webapp} target="_blank" rel="noopener noreferrer" data-tooltip="Live Demo">
+                    <FaExternalLinkAlt />
+                  </a>
+                )}
+                {project.youtube && (
+                  <a href={project.youtube} target="_blank" rel="noopener noreferrer" data-tooltip="YouTube Video">
+                    <FaYoutube color="red" />
+                  </a>
+                )}
+              </TopIcons>
+            </HeaderRow>
+
+          
             <StyledSlider {...settings}>
               {project.image?.map((image, index) => (
                 <div key={index}>
@@ -204,21 +293,7 @@ export default function ProjectModal({ project, close, isOpen }) {
               ))}
             </Tags>
 
-            {project.github && (
-              <Link to={project.github} target="_blank">
-                <Description className="underline decoration-4 hover:decoration-sky-400">
-                  GitHub Link 👆
-                </Description>
-              </Link>
-            )}
-
-            {project.webapp && (
-              <Link to={project.webapp} target="_blank">
-                <Description className="underline decoration-4 hover:decoration-sky-400">
-                  Deployed Link 👆
-                </Description>
-              </Link>
-            )}
+        
           </Card>
         </Dialog.Panel>
       </div>
