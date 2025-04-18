@@ -4,7 +4,7 @@ import { Bio } from "../../data/constants";
 import {
   HeroContainer,
   HeroInnerContainer,
-  ResumeButton,
+  LookButton,
   SubTitle,
   Title
 } from "./HeroStyle";
@@ -62,13 +62,12 @@ const HeroSection = () => {
               />
 
               <div
-                className={`mt-6 ${
-                  isMobile ? "flex justify-center" : ""
-                }`}
+                className={`mt-6 ${isMobile ? "flex justify-center" : ""}`}
               >
-                <ResumeButton href={Bio.resume} target="display">
-                  Resume
-                </ResumeButton>
+              <LookButton href="https://your-link.com" target="_blank">
+                  <span className="eyes">👀</span>In production with 50M+ users
+              </LookButton>
+
               </div>
             </div>
 

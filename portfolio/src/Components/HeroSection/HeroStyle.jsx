@@ -1,4 +1,6 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+
 // import _default from "../../themes/default";
 
 export const HeroContainer = styled.div`
@@ -172,37 +174,69 @@ export const SubTitle = styled.div`
   }
 `;
 
-export const ResumeButton = styled.a`
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-    text-decoration: none;
-    width: 95%;
-    max-width: 300px;
-    text-align: center;
-    padding: 16px 0;
-    color:${({ theme }) => theme.white};
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 600;
-    transition: all 0.2s ease-in-out !important;
-    background: hsla(271, 100%, 50%, 1);
-    background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    box-shadow:  10px 10px 5px #1F2634,
-    0px 0px 0px;
-    &:hover {
-        transform: scale(1.05);
-    transition: all 0.4s ease-in-out;
-    filter: brightness(1);
-    }    
-    
-    
-    @media (max-width: 640px) {
-        padding: 12px 0;
-        font-size: 18px;
-    } 
 
+const looky = keyframes`
+  0% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.2) rotate(-5deg); }
+  50% { transform: scale(1.2) rotate(5deg); }
+  75% { transform: scale(1.1) rotate(-3deg); }
+  100% { transform: scale(1) rotate(0deg); }
+`;
+
+export const LookButton = styled.a`
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
+  width: 95%;
+  max-width: 300px;
+  text-align: center;
+  padding: 18px 24px; /* more padding for better feel */
+  color: ${({ theme }) => theme.white};
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+
+  /* Softer, more muted gradient */
+  background: linear-gradient(
+    225deg,
+    hsla(271, 100%, 40%, 1) 0%,
+    hsla(294, 100%, 45%, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    225deg,
+    hsla(271, 100%, 40%, 1) 0%,
+    hsla(294, 100%, 45%, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    225deg,
+    hsla(271, 100%, 40%, 1) 0%,
+    hsla(294, 100%, 45%, 1) 100%
+  );
+
+  box-shadow: 8px 8px 5px rgba(31, 38, 52, 0.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  .eyes {
+    font-size: 30px;
+    display: inline-block;
+    animation: ${looky} 2s ease-in-out infinite;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    transition: all 0.4s ease-in-out;
+    filter: brightness(1.1);
+  }
+
+  @media (max-width: 640px) {
+    padding: 14px 20px;
+    font-size: 18px;
+  }
 `;

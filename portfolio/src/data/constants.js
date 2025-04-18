@@ -1,5 +1,5 @@
 export const Bio = {
-  name: "Varun Chaudhary",
+  name: "Varun",
   roles: [
     "Software Engineer",
     "Frontend Developer",
@@ -7,7 +7,7 @@ export const Bio = {
     "Mobile App Developer",
   ],
   description:
-    'Software Engineer with expertise in Full Stack Development and experience in cross-platform mobile app development. I have industry experience and have built <a href="https://github.com/yourusername" target="_blank" class="text-blue-600 underline">features</a> used by <strong>over 25 million customers</strong>.',
+    'Software Engineer with expertise in Full Stack Development and experience in cross-platform mobile app development. I have industry experience and have built <a href="https://github.com/yourusername" target="_blank" >features</a> used by <strong>over 25 million customers</strong>.',
   github: "https://github.com/varun-chaudhary",
   resume: "#",
   linkedin: "https://www.linkedin.com/in/varunchaudharycse/",
