@@ -185,6 +185,41 @@ export const education = [
 export const projects = [
   {
     id: 1,
+    title: "Goal Tracker",
+    date: "Feb 2025",
+    description:
+      "A sleek and powerful web app to set goals, track milestones, and stay laser-focused! Featuring a customizable dashboard, detailed progress reports, and smart insights, it keeps you motivated every step of the way. Supports both dark and light themes for the perfect vibe—day or night. Whether it’s personal growth or big wins, this app helps you crush it, one milestone at a time. 🌗📈",
+    image: [
+      "https://github.com/varun-chaudhary/Sources/raw/main/Projects/GoalTracker/GT1.png",
+      "https://github.com/varun-chaudhary/Sources/raw/main/Projects/GoalTracker/GT2.png",
+      "https://github.com/varun-chaudhary/Sources/raw/main/Projects/GoalTracker/GT3.png",
+      "https://github.com/varun-chaudhary/Sources/raw/main/Projects/GoalTracker/GT4.png",
+      "https://github.com/varun-chaudhary/Sources/raw/main/Projects/GoalTracker/GT5.png",
+    ],
+    tags: ["Django", "React", "SQLite"],
+    category: "web app",
+    github: "https://github.com/varun-chaudhary/Goal-Tracker",
+    webapp: "",
+    youtube: "https://www.youtube.com/watch?v=Q5HbSMyNk5s",
+  },
+  {
+    id: 1,
+    title: "Learn Flow",
+    date: "Feb 2025",
+    description:
+      "A sleek and powerful web app to set goals, track milestones, and stay laser-focused! Featuring a customizable dashboard, detailed progress reports, and smart insights, it keeps you motivated every step of the way. Supports both dark and light themes for the perfect vibe—day or night. Whether it’s personal growth or big wins, this app helps you crush it, one milestone at a time. 🌗📈",
+    image: [
+      "https://github.com/varun-chaudhary/Sources/raw/main/Projects/LearnFlow/LF1.png",
+    ],
+    tags: ["Django", "React", "SQLite"],
+    category: "AI",
+    github:
+      "https://github.com/varun-chaudhary/LearnFlow-AI-based-study-plan-generator",
+    webapp: "",
+    youtube: "https://www.youtube.com/watch?v=Q5HbSMyNk5s",
+  },
+  {
+    id: 1,
     title: "Personal Portfolio",
     date: "April 2025",
     description:
@@ -281,12 +316,22 @@ export const certificates = [
 export const experience = [
   {
     id: 1,
-    company: "Your Company Name",
-    logo: "https://example.com/company-logo.png",
-    role: "Your Role",
-    duration: "Start Date - End Date",
+    company: "Amazon",
+    logo: "https://static.amazonmusic.com/dims4/default/1feffd3/2147483647/strip/true/crop/1080x608+0+236/resize/1000x563!/quality/90/?url=https%3A%2F%2Famazon-k1-prod-music2.s3.us-west-2.amazonaws.com%2Fbrightspot%2F00%2F75%2Ffce403944478b583567b6659a7a0%2Fprimary-s.jpg",
+    role: "Software Development Engineer Intern",
+    duration: "July 2024 - Dec 2024",
     description:
-      "A detailed description of your role, responsibilities, and achievements. Highlight key projects and contributions. Keep it concise but impactful.",
-    skills: ["Skill 1", "Skill 2", "Skill 3", "Skill 4", "Skill 5"],
+      '<ul><li>Built a <a href="https://your-feature-link.com" target="_blank" rel="noopener noreferrer" style="color: #007bff; text-decoration: underline;"><strong>card stack feature</strong></a> with smooth, high-performance animations for a <strong>cross-platform app serving 50M+ users</strong>.</li><li><strong>Optimized polling logic</strong> for fetching AI-generated playlist artwork, reducing latency by <strong>64% (11s → 4s)</strong>.</li><li>Implemented a <strong>factory pattern</strong> to unify genre- and artist-based processors into a single Lambda, <strong>cutting costs by 50%</strong>.</li><li>Developed a <strong>language-based artist taste collector</strong> (frontend + backend) to personalize music for <strong>new users</strong>.</li><li><strong>Won hackathon</strong> with a solution that delivers more relevant tracks from <strong>vague or ambiguous prompts</strong>.</li></ul>',
+    skills: [
+      "React Native",
+      "Android SDK",
+      "Kotlin",
+      "Java",
+      "Typescript",
+      "Node.js",
+      "Git",
+      "GITLAB",
+      "CI/CD",
+    ],
   },
 ];

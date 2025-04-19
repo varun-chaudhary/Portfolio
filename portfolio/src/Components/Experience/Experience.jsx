@@ -146,7 +146,7 @@ const Experience = () => {
                 <Duration>{exp.duration}</Duration>
               </div>
             </div>
-            <Description>{exp.description}</Description>
+            <Description dangerouslySetInnerHTML={{ __html: exp.description }} />
             <SkillsContainer>
               {exp.skills.map((skill, idx) => (
                 <SkillTag key={idx}>{skill}</SkillTag>
@@ -154,6 +154,7 @@ const Experience = () => {
             </SkillsContainer>
           </ExperienceCard>
         ))}
+
       </Wrapper>
     </Container>
   );
