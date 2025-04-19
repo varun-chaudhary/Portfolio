@@ -109,6 +109,15 @@ const Grade = styled.div`
     }
 `
 
+const Location = styled.div`
+    font-size: 14px;
+    font-weight: 500;
+    color: ${({ theme }) => theme.text_secondary};
+    @media only screen and (max-width: 768px){
+        font-size: 12px;
+    }
+`
+
 const Date = styled.div`
     font-size: 12px;
     font-weight: 400;
@@ -188,6 +197,7 @@ const Education = ({ darkmode }) => {
                                             <Image src={element.img} />
                                             <Body>
                                                 <Name>{element.school}</Name>
+                                                <Location>{element.location}</Location>
                                                 <Degree>{element.degree}</Degree>
                                                 <Grade>{element.grade}</Grade>
                                             </Body>

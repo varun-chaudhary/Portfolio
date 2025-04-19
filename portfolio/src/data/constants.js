@@ -159,6 +159,7 @@ export const education = [
     date: "Aug 2021 - Jul 2025",
     grade: "8.8 CGPA",
     degree: "Bachelor of Technology - BTech, Computer Science and Engineering",
+    location: "Jalndhar, Punjab, India",
   },
   {
     id: 1,
@@ -166,6 +167,7 @@ export const education = [
     school: "Seth Hukam Chand School",
     date: "May 2019 - Jul 2021",
     degree: "XII (CBSE), Science",
+    location: "Jalndhar, Punjab, India",
   },
   {
     id: 2,
@@ -173,6 +175,7 @@ export const education = [
     school: "Seth Hukam Chand School",
     date: "Apr 2017 - May 2019",
     degree: "X (CBSE)",
+    location: "Jalndhar, Punjab, India",
   },
 ];
 
