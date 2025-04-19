@@ -33,6 +33,18 @@ const Project = () => {
             <ToggleButton value="android app" onClick={() => setToggle('android app')}>ANDROID APP'S</ToggleButton>
           }
           <Divider />
+          {toggle === 'AI' ?
+            <ToggleButton active value="AI" onClick={() => setToggle('AI')}>AI</ToggleButton>
+            :
+            <ToggleButton value="AI" onClick={() => setToggle('AI')}>AI</ToggleButton>
+          }
+          <Divider />
+          {toggle === 'desktop app' ?
+            <ToggleButton active value="desktop app" onClick={() => setToggle('desktop app')}>DESKTOP APP'S</ToggleButton>
+            :
+            <ToggleButton value="desktop app" onClick={() => setToggle('desktop app')}>DESKTOP APP'S</ToggleButton>
+          }
+
           
         </ToggleButtonGroup>
         <CardContainer>
