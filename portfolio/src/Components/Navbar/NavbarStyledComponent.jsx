@@ -152,6 +152,11 @@ export const ButtonContainer = styled.div`
   a {
     position: relative;
     cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    
+    &:hover {
+      transform: scale(1.2);
+    }
     
     &:hover::after {
       content: attr(title);
@@ -212,6 +217,11 @@ export const MobileMenu = styled.div`
       a {
         position: relative;
         cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+        
+        &:hover {
+          transform: scale(1.2);
+        }
         
         &:hover::after {
           content: attr(title);
