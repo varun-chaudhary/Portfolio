@@ -12,6 +12,9 @@ export const Bio = {
   resume: "#",
   linkedin: "https://www.linkedin.com/in/varunchaudharycse/",
   leetcode: "https://leetcode.com/varunc105/",
+  phone: "+91 7087637794",
+  email: "varunchaudharycse@gmail.com",
+  linkedinHandle: "varunchaudharycse",
 };
 
 export const skills = [
