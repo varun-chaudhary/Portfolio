@@ -1,7 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import ProjectModal from '../Projects/ProjectModal'
-import { useState } from 'react'
 
 
 const Button = styled.button`
@@ -41,11 +40,12 @@ const Card = styled.div`
 `
 
 const Image = styled.img`
-    // width: 100%;
     height: 180px;
     background-color: ${({ theme }) => theme.white};
     border-radius: 10px;
     box-shadow: 0 0 16px 2px rgba(0,0,0,0.3);
+    object-fit: cover;
+    width: 100%;
 `
 
 const Tags = styled.div`
@@ -123,23 +123,26 @@ const Avatar = styled.img`
     border: 3px solid ${({ theme }) => theme.card};
 `
 
-const ProjectCards = ({project}) => {
+const ProjectCards = ({ project }) => {
     let [isOpen, setIsOpen] = useState(false)
 
     function open() {
         setIsOpen(true)
-      }
-    
-      function close() {
+    }
+
+    function close() {
         setIsOpen(false)
-      }
-    
+    }
+
     return (
         <Card onClick={open}>
-            <Image src={project.image} className={project.category === 'android app' ? 'object-contain' : ''}/>
+            <Image
+                src={project.image[0]}
+                className={project.category === 'android app' ? 'object-contain' : ''}
+            />
             <Tags>
                 {project.tags?.map((tag, index) => (
-                <Tag key={index} >{tag}</Tag>
+                    <Tag key={index} >{tag}</Tag>
                 ))}
             </Tags>
             <Details>
@@ -149,7 +152,7 @@ const ProjectCards = ({project}) => {
             </Details>
             <Members>
                 {project.member?.map((member) => (
-                    <Avatar src={member.img}/>
+                    <Avatar src={member.img} />
                 ))}
             </Members>
             {/* <Button>View Project</Button> */}

@@ -185,27 +185,18 @@ export const education = [
 export const projects = [
   {
     id: 1,
-    title: "Demo",
-    date: "Sep 2024 - Nov 2024",
+    title: "Personal Portfolio",
+    date: "April 2025",
     description:
-      "StrideSync is an Android application that tracks your steps, calories burned, and distance covered. It also provides a settings screen where users can view and edit their profile information.",
-
+      "This is my personal portfolio website, showcasing my skills, projects, and experience. It is built using React and Tailwind CSS.",
     image: [
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUPIfiGgUML8G3ZqsNLHfaCnZK3I5g4tJabQ&s",
-      "https://static.vecteezy.com/system/resources/thumbnails/036/324/708/small/ai-generated-picture-of-a-tiger-walking-in-the-forest-photo.jpg",
+      "https://github.com/varun-chaudhary/Sources/raw/main/Projects/Portfoli/Port.png",
     ],
-    tags: [
-      "Android Studio",
-      "Servince",
-      "Notification",
-      "Kotlin",
-      "XML",
-      "SQL",
-    ],
+    tags: ["React", "Tailwind CSS", "Styled Components", "JavaScript"],
     category: "android app",
-    github: "sfs",
+    github: "https://github.com/varun-chaudhary/Portfolio",
     webapp: "dsfs",
-    youtube: "dsfs",
+    youtube: "",
   },
 ];
 

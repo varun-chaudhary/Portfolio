@@ -8,8 +8,8 @@ import 'slick-carousel/slick/slick.css'
 import styled, { useTheme } from 'styled-components'
 
 const Card = styled.div`
-background: ${({ theme }) =>
-  `linear-gradient(45deg, ${theme.card_light}, ${theme.bgLight}, rgba(255, 255, 255, 0.05))`};
+  background: ${({ theme }) =>
+    `linear-gradient(45deg, ${theme.card_light}, ${theme.bgLight}, rgba(255, 255, 255, 0.05))`};
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   padding: 30px 24px;
@@ -60,6 +60,7 @@ const StyledSlider = styled(Slider)`
 
 const CarouselImage = styled.img`
   width: 100%;
+  height: auto;
   max-height: 45vh;
   object-fit: contain;
   border-radius: 12px;
@@ -83,8 +84,6 @@ const Tag = styled.span`
   padding: 4px 10px;
   border-radius: 10px;
 `
-
-
 
 const Date = styled.div`
   font-size: 13px;
@@ -152,6 +151,7 @@ const CloseButton = styled.button`
     color: ${({ theme }) => theme.primary};
   }
 `
+
 const HeaderRow = styled.div`
   display: flex;
   justify-content: space-between;
@@ -224,20 +224,20 @@ const TopIcons = styled.div`
   }
 `
 
-
 export default function ProjectModal({ project, close, isOpen }) {
   const [currentSlide, setCurrentSlide] = useState(0)
   const theme = useTheme()
 
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
     beforeChange: (_, next) => setCurrentSlide(next),
+    adaptiveHeight: true,
   }
 
   return (
@@ -254,7 +254,7 @@ export default function ProjectModal({ project, close, isOpen }) {
               <TitleWrapper>
                 <Title>{project.title}</Title>
               </TitleWrapper>
-              
+
               <Date>{project.date}</Date>
 
               <TopIcons>
@@ -276,14 +276,19 @@ export default function ProjectModal({ project, close, isOpen }) {
               </TopIcons>
             </HeaderRow>
 
-          
-            <StyledSlider {...settings}>
-              {project.image?.map((image, index) => (
-                <div key={index}>
-                  <CarouselImage src={image} alt={`${project.title} - Image ${index + 1}`} />
-                </div>
-              ))}
-            </StyledSlider>
+            {project.image?.length > 1 ? (
+              <StyledSlider {...settings}>
+                {project.image.map((image, index) => (
+                  <div key={index}>
+                    <CarouselImage src={image} alt={`${project.title} - Image ${index + 1}`} />
+                  </div>
+                ))}
+              </StyledSlider>
+            ) : (
+              project.image?.[0] && (
+                <CarouselImage src={project.image[0]} alt={`${project.title} - Image`} />
+              )
+            )}
 
             <Description>{project.description}</Description>
 
@@ -292,8 +297,6 @@ export default function ProjectModal({ project, close, isOpen }) {
                 <Tag key={index}>{tag}</Tag>
               ))}
             </Tags>
-
-        
           </Card>
         </Dialog.Panel>
       </div>
