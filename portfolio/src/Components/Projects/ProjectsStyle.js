@@ -61,37 +61,34 @@ export const Desc = styled.div`
 
 export const ToggleButtonGroup = styled.div`
   display: flex;
-  border: 1.5px solid ${({ theme }) => theme.primary};
-  color: ${({ theme }) => theme.primary};
-  font-size: 16px;
-  border-radius: 12px;
-  font-weight: 500;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
   margin: 22px 0px;
   @media (max-width: 768px) {
-    font-size: 12px;
+    gap: 8px;
   }
 `;
 
 export const ToggleButton = styled.div`
   padding: 8px 18px;
-  border-radius: 6px;
+  border-radius: 20px;
   cursor: pointer;
-  ${({ active, theme }) =>
-    active &&
-    `
-    background: ${theme.primary + 30};
-    `}
+  font-size: 16px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.text_primary};
+  background: ${({ active, theme }) => active ? theme.primary + 30 : theme.card};
+  border: 1.5px solid ${({ theme }) => theme.primary};
+  transition: all 0.3s ease;
+  
   &:hover {
     background: ${({ theme }) => theme.primary + 15};
   }
+  
   @media (max-width: 768px) {
-    padding: 6px 8px;
-    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 14px;
   }
-`;
-export const Divider = styled.div`
-  width: 1.5px;
-  background: ${({ theme }) => theme.primary};
 `;
 
 export const CardContainer = styled.div`
