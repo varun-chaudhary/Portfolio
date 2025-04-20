@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 import styled, { ThemeProvider } from "styled-components";
 import "./App.css";
 import Certificates from './Components/Certificates/Certificates';
