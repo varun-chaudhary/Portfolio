@@ -70,6 +70,7 @@ const StyledSlider = styled(Slider)`
     gap: 40px;
     padding: 40px 0;
     align-items: center;
+    margin-left: -7px;
   }
 
   .slick-slide {

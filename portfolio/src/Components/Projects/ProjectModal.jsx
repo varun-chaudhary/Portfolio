@@ -64,7 +64,6 @@ const CarouselImage = styled.img`
   max-height: 45vh;
   object-fit: contain;
   border-radius: 12px;
-  box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.2);
   background-color: ${({ theme }) => theme.white};
 `
 
