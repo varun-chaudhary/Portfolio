@@ -289,7 +289,7 @@ export default function ProjectModal({ project, close, isOpen }) {
               )
             )}
 
-            <Description>{project.description}</Description>
+            <Description dangerouslySetInnerHTML={{ __html: project.description }} />
 
             <Tags>
               {project.tags?.map((tag, index) => (

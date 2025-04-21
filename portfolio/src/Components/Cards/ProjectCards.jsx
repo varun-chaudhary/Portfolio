@@ -148,7 +148,7 @@ const ProjectCards = ({ project }) => {
             <Details>
                 <Title>{project.title}</Title>
                 <Date>{project.date}</Date>
-                <Description className='text-balance'>{project.description}</Description>
+                <Description className='text-balance'  dangerouslySetInnerHTML={{ __html: project.description }} />
             </Details>
             <Members>
                 {project.member?.map((member) => (
