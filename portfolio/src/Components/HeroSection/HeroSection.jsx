@@ -65,7 +65,7 @@ const HeroSection = () => {
                 className={`mt-6 ${isMobile ? "flex justify-center" : ""}`}
               >
               <LookButton href="https://your-link.com" target="_blank">
-                  <span className="eyes">👀</span>In production with 50M+ users
+                  <span className="eyes">👀</span>Check out what I built for 50M+ users
               </LookButton>
 
               </div>

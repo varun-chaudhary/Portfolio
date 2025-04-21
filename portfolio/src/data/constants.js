@@ -7,7 +7,7 @@ export const Bio = {
     "Mobile App Developer",
   ],
   description:
-    'Software Engineer with expertise in Full Stack Development and experience in cross-platform mobile app development. I have industry experience and have built <a href="https://github.com/yourusername" target="_blank" >features</a> used by <strong>over 25 million customers</strong>.',
+    "Software Engineer with expertise in <strong>Full Stack Development</strong> and experience in <strong>cross-platform mobile app development</strong>. I have professional experience building features that serve <strong>over 50 million customers</strong>.",
   github: "https://github.com/varun-chaudhary",
   resume: "#",
   linkedin: "https://www.linkedin.com/in/varunchaudharycse/",
@@ -185,6 +185,22 @@ export const education = [
 export const projects = [
   {
     id: 1,
+    title: "Learn Flow",
+    date: "Feb 2025",
+    description:
+      "A sleek and powerful web app to set goals, track milestones, and stay laser-focused! Featuring a customizable dashboard, detailed progress reports, and smart insights, it keeps you motivated every step of the way. Supports both dark and light themes for the perfect vibe—day or night. Whether it’s personal growth or big wins, this app helps you crush it, one milestone at a time. 🌗📈",
+    image: [
+      "https://github.com/varun-chaudhary/Sources/raw/main/Projects/LearnFlow/LF1.png",
+    ],
+    tags: ["Django", "React", "PostgreSQL"],
+    category: "AI",
+    github:
+      "https://github.com/varun-chaudhary/LearnFlow-AI-based-study-plan-generator",
+    webapp: "",
+    youtube: "https://www.youtube.com/watch?v=Q5HbSMyNk5s",
+  },
+  {
+    id: 1,
     title: "Goal Tracker",
     date: "Feb 2025",
     description:
@@ -199,22 +215,6 @@ export const projects = [
     tags: ["Django", "React", "SQLite"],
     category: "web app",
     github: "https://github.com/varun-chaudhary/Goal-Tracker",
-    webapp: "",
-    youtube: "https://www.youtube.com/watch?v=Q5HbSMyNk5s",
-  },
-  {
-    id: 1,
-    title: "Learn Flow",
-    date: "Feb 2025",
-    description:
-      "A sleek and powerful web app to set goals, track milestones, and stay laser-focused! Featuring a customizable dashboard, detailed progress reports, and smart insights, it keeps you motivated every step of the way. Supports both dark and light themes for the perfect vibe—day or night. Whether it’s personal growth or big wins, this app helps you crush it, one milestone at a time. 🌗📈",
-    image: [
-      "https://github.com/varun-chaudhary/Sources/raw/main/Projects/LearnFlow/LF1.png",
-    ],
-    tags: ["Django", "React", "SQLite"],
-    category: "AI",
-    github:
-      "https://github.com/varun-chaudhary/LearnFlow-AI-based-study-plan-generator",
     webapp: "",
     youtube: "https://www.youtube.com/watch?v=Q5HbSMyNk5s",
   },
@@ -321,7 +321,7 @@ export const experience = [
     role: "Software Development Engineer Intern",
     duration: "July 2024 - Dec 2024",
     description:
-      '<ul><li>Built a <a href="https://your-feature-link.com" target="_blank" rel="noopener noreferrer" style="color: #007bff; text-decoration: underline;"><strong>card stack feature</strong></a> with smooth, high-performance animations for a <strong>cross-platform app serving 50M+ users</strong>.</li><li><strong>Optimized polling logic</strong> for fetching AI-generated playlist artwork, reducing latency by <strong>64% (11s → 4s)</strong>.</li><li>Implemented a <strong>factory pattern</strong> to unify genre- and artist-based processors into a single Lambda, <strong>cutting costs by 50%</strong>.</li><li>Developed a <strong>language-based artist taste collector</strong> (frontend + backend) to personalize music for <strong>new users</strong>.</li><li><strong>Won hackathon</strong> with a solution that delivers more relevant tracks from <strong>vague or ambiguous prompts</strong>.</li></ul>',
+      '<ul><li>Built a <a href="https://your-feature-link.com" target="_blank" rel="noopener noreferrer" style="color: #007bff; text-decoration: underline;"><strong>card stack feature</strong></a> with smooth, high-performance animations for a <strong>cross-platform Amazon Music app serving 50M+ users</strong>.</li><li><strong>Optimized polling logic</strong> for fetching AI-generated playlist artwork, reducing latency by <strong>64% (11s → 4s)</strong>.</li><li>Implemented a <strong>factory pattern</strong> to unify genre- and artist-based processors—used to <strong>compute top artists weekly based on listen counts</strong>—into a single Lambda, <strong>cutting costs by 50%</strong>.</li><li>Developed a <strong>language-based artist taste collector</strong> (frontend + backend) to personalize music for <strong>new users</strong>.</li><li><strong>Won hackathon</strong> with a solution that delivers more relevant tracks from <strong>vague or ambiguous prompts</strong>.</li></ul>',
     skills: [
       "React Native",
       "Android SDK",
