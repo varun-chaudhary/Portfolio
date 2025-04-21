@@ -188,16 +188,23 @@ export const projects = [
     title: "Learn Flow",
     date: "Feb 2025",
     description:
-      "A sleek and powerful web app to set goals, track milestones, and stay laser-focused! Featuring a customizable dashboard, detailed progress reports, and smart insights, it keeps you motivated every step of the way. Supports both dark and light themes for the perfect vibe—day or night. Whether it’s personal growth or big wins, this app helps you crush it, one milestone at a time. 🌗📈",
+      "This project is an <strong>AI-powered study planner</strong> that leverages <strong>large language models (LLMs)</strong> to create <strong>personalized learning roadmaps</strong> for any topic. It curates <strong>high-quality resources</strong>, including <strong>top-rated YouTube videos</strong>, <strong>popular Google articles</strong>, and <strong>official documentation</strong>.<br/><br/A standout feature is the <strong>interactive quiz generation</strong>, which allows users to <strong>test their understanding topic-wise</strong>, <strong>track their performance</strong>, and <strong>visualize their learning progress</strong> over time. The platform provides a dedicated <strong>user profile dashboard</strong> where learners can monitor their <strong>stats</strong>, <strong>growth</strong>, and <strong>completed milestones</strong>—making studying both <strong>structured</strong> and <strong>engaging</strong>.",
     image: [
       "https://github.com/varun-chaudhary/Sources/raw/main/Projects/LearnFlow/LF1.png",
+      "https://github.com/varun-chaudhary/Sources/raw/main/Projects/LearnFlow/LF2.png",
+      "https://github.com/varun-chaudhary/Sources/raw/main/Projects/LearnFlow/LF3.png",
+      "https://github.com/varun-chaudhary/Sources/raw/main/Projects/LearnFlow/LF4.png",
+      "https://github.com/varun-chaudhary/Sources/raw/main/Projects/LearnFlow/LF8.png",
+      "https://github.com/varun-chaudhary/Sources/raw/main/Projects/LearnFlow/LF15.png",
+      "https://github.com/varun-chaudhary/Sources/raw/main/Projects/LearnFlow/LF16.png",
+      "https://github.com/varun-chaudhary/Sources/raw/main/Projects/LearnFlow/LF17.png",
     ],
-    tags: ["Django", "React", "PostgreSQL"],
+    tags: ["Django", "React", "PostgreSQL", "LLM"],
     category: "AI",
     github:
       "https://github.com/varun-chaudhary/LearnFlow-AI-based-study-plan-generator",
-    webapp: "",
-    youtube: "https://www.youtube.com/watch?v=Q5HbSMyNk5s",
+    webapp: "https://learnflow-pjd3.onrender.com/",
+    youtube: "https://youtu.be/-P7PbcUu7kY",
   },
   {
     id: 1,
@@ -216,7 +223,7 @@ export const projects = [
     category: "web app",
     github: "https://github.com/varun-chaudhary/Goal-Tracker",
     webapp: "",
-    youtube: "https://www.youtube.com/watch?v=Q5HbSMyNk5s",
+    youtube: "https://www.youtube.com/watch?v=yGFuqSQyBT0",
   },
   {
     id: 1,
@@ -321,7 +328,7 @@ export const experience = [
     role: "Software Development Engineer Intern",
     duration: "July 2024 - Dec 2024",
     description:
-      '<ul><li>Built a <a href="https://your-feature-link.com" target="_blank" rel="noopener noreferrer" style="color: #007bff; text-decoration: underline;"><strong>card stack feature</strong></a> with smooth, high-performance animations for a <strong>cross-platform Amazon Music app serving 50M+ users</strong>.</li><li><strong>Optimized polling logic</strong> for fetching AI-generated playlist artwork, reducing latency by <strong>64% (11s → 4s)</strong>.</li><li>Implemented a <strong>factory pattern</strong> to unify genre- and artist-based processors—used to <strong>compute top artists weekly based on listen counts</strong>—into a single Lambda, <strong>cutting costs by 50%</strong>.</li><li>Developed a <strong>language-based artist taste collector</strong> (frontend + backend) to personalize music for <strong>new users</strong>.</li><li><strong>Won hackathon</strong> with a solution that delivers more relevant tracks from <strong>vague or ambiguous prompts</strong>.</li></ul>',
+      '<ul><li>Built a <a href="https://www.youtube.com/shorts/eQhXgKAchG4" target="_blank" rel="noopener noreferrer" "><strong>card stack feature</strong></a> with smooth, high-performance animations for a <strong>cross-platform Amazon Music app serving 50M+ users</strong>.</li><li><strong>Optimized polling logic</strong> for fetching AI-generated playlist artwork, reducing latency by <strong>64% (11s → 4s)</strong>.</li><li>Implemented a <strong>factory pattern</strong> to unify genre- and artist-based processors—used to <strong>compute top artists weekly based on listen counts</strong>—into a single Lambda, <strong>cutting costs by 50%</strong>.</li><li>Developed a <strong>language-based artist taste collector</strong> (frontend + backend) to personalize music for <strong>new users</strong>.</li><li><strong>Won hackathon</strong> with a solution that delivers more relevant tracks from <strong>vague or ambiguous prompts</strong>.</li></ul>',
     skills: [
       "React Native",
       "Android SDK",

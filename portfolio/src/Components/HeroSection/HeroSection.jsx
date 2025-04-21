@@ -64,7 +64,7 @@ const HeroSection = () => {
               <div
                 className={`mt-6 ${isMobile ? "flex justify-center" : ""}`}
               >
-              <LookButton href="https://your-link.com" target="_blank">
+              <LookButton href="https://www.youtube.com/shorts/eQhXgKAchG4" target="_blank">
                   <span className="eyes">👀</span>Check out what I built for 50M+ users
               </LookButton>
 
