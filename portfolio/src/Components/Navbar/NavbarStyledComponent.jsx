@@ -198,12 +198,13 @@ export const MobileIcon = styled.div`
 export const MobileMenu = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 16px;
-    position: absolute;
+    position: fixed;
     top: 80px;
     right: 0;
     width: 250px;
+    max-height: calc(100vh - 80px);
     padding: 20px;
     background: ${({ theme }) => theme.card_light};
     transition: all 0.6s ease-in-out;
@@ -212,6 +213,20 @@ export const MobileMenu = styled.div`
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
     z-index: ${({ isOpen }) => (isOpen ? '1000' : '-1000')};
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: ${({ theme }) => theme.card_light};
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: ${({ theme }) => theme.primary};
+        border-radius: 3px;
+    }
 
     div {
       a {

@@ -28,7 +28,7 @@ const HeroSection = () => {
   const handleLoad = () => {
     setTimeout(() => {
       setIsSplineLoaded(true);
-    }, 10000);
+    }, 100);
   };
 
   return (
@@ -92,8 +92,8 @@ const HeroSection = () => {
                   </Suspense>
                 </div>
               )}
-
             </div>
+
           </div>
         </HeroInnerContainer>
       </HeroContainer>
