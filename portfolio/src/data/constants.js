@@ -313,6 +313,7 @@ export const certificates = [
   {
     id: 4,
     title: "Introduction to Hardware and Operating Systems",
+
     date: "June 2022",
     image:
       "https://github.com/varun-chaudhary/Sources/raw/main/Certificates/os.png",
@@ -328,17 +329,22 @@ export const experience = [
     role: "Software Development Engineer Intern",
     duration: "July 2024 - Dec 2024",
     description:
-      '<ul><li>Built a <a href="https://www.youtube.com/shorts/eQhXgKAchG4" target="_blank" rel="noopener noreferrer" "><strong>card stack feature</strong></a> with smooth, high-performance animations for a <strong>cross-platform Amazon Music app serving 50M+ users</strong>.</li><li><strong>Optimized polling logic</strong> for fetching AI-generated playlist artwork, reducing latency by <strong>64% (11s → 4s)</strong>.</li><li>Implemented a <strong>factory pattern</strong> to unify genre- and artist-based processors—used to <strong>compute top artists weekly based on listen counts</strong>—into a single Lambda, <strong>cutting costs by 50%</strong>.</li><li>Developed a <strong>language-based artist taste collector</strong> (frontend + backend) to personalize music for <strong>new users</strong>.</li><li><strong>Won hackathon</strong> with a solution that delivers more relevant tracks from <strong>vague or ambiguous prompts</strong>.</li></ul>',
+      '<ul><li>Built a <a href="https://www.youtube.com/shorts/eQhXgKAchG4" target="_blank" rel="noopener noreferrer">Community Playlists feature</a> with smooth, high-performance animations for a cross-platform Amazon Music app <strong>serving 50M+ users</strong>.</li><li>Optimized polling logic for fetching AI-generated playlist artwork, <strong>reducing latency by 64%</strong> (11s → 4s).</li><li>Integrated AI-generated cover art with Maestro Playlist, an <strong>AI-powered playlist generator</strong>.</li><li>Implemented a factory pattern to unify genre- and artist-based processors—used to compute top artists weekly based on listen counts—into a single Lambda, <strong>cutting costs by 50%</strong> with <strong>99.2% test coverage</strong>.</li><li>Developed a language-based artist taste collector (frontend + backend) to personalize music for new users.</li><li>Emitted crucial metrics to collect insights and understand user habits.</li><li><strong>Won hackathon</strong> with a solution that delivers more relevant tracks from vague or ambiguous prompts.</li></ul>',
     skills: [
       "React Native",
       "Android SDK",
       "Kotlin",
       "Java",
+      "Swift",
       "Typescript",
       "Node.js",
+      "Jest",
+      "Junit",
+      "AWS",
       "Git",
-      "GITLAB",
+      "Gitlab",
       "CI/CD",
+      "Jira",
     ],
   },
 ];
