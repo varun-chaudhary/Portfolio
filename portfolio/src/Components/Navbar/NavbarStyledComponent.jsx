@@ -78,7 +78,7 @@ export const NavItems = styled.ul`
     padding: 0 6px;
     list-style: none;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1490px) {
       display: none;
     }
 `;
@@ -135,7 +135,7 @@ export const GitHubButton = styled.a`
       background: ${({ theme }) => theme.primary};
       color: ${({ theme }) => theme.white};     
     }
-    @media screen and (max-width: 768px) { 
+    @media screen and (max-width: 1490px) { 
     font-size: 14px;
     }
 `;
@@ -175,7 +175,7 @@ export const ButtonContainer = styled.div`
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1490px) {
     display: none;
   }
 `;
@@ -183,7 +183,7 @@ export const ButtonContainer = styled.div`
 
 export const MobileIcon = styled.div`
   display: none;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1490px) {
     display: block;
     position: absolute;
     top: 0;
@@ -203,12 +203,12 @@ export const MobileMenu = styled.div`
     position: absolute;
     top: 80px;
     right: 0;
-    width: 100%;
-    padding: 12px 40px 24px 40px;
+    width: 250px;
+    padding: 20px;
     background: ${({ theme }) => theme.card_light};
     transition: all 0.6s ease-in-out;
-    transform: ${({ isOpen }) => (isOpen ? 'translateY(0)' : 'translateY(-100%)')};
-    border-radius: 0 0 20px 20px;
+    transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(100%)')};
+    border-radius: 0 0 0 20px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
     z-index: ${({ isOpen }) => (isOpen ? '1000' : '-1000')};
