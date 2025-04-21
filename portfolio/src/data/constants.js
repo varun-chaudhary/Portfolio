@@ -7,7 +7,7 @@ export const Bio = {
     "Mobile App Developer",
   ],
   description:
-    'Software Engineer with expertise in Full Stack Development and experience in cross-platform mobile app development. I have industry experience and have built <a href="https://github.com/yourusername" target="_blank" >features</a> used by <strong>over 25 million customers</strong>.',
+    "Software Engineer with expertise in <strong>Full Stack Development</strong> and experience in <strong>cross-platform mobile app development</strong>. I have professional experience building features that serve <strong>over 50 million customers</strong>.",
   github: "https://github.com/varun-chaudhary",
   resume: "#",
   linkedin: "https://www.linkedin.com/in/varunchaudharycse/",
@@ -185,10 +185,26 @@ export const education = [
 export const projects = [
   {
     id: 1,
-    title: "Goal Tracker",
+    title: "Learn Flow",
     date: "Feb 2025",
     description:
       "A sleek and powerful web app to set goals, track milestones, and stay laser-focused! Featuring a customizable dashboard, detailed progress reports, and smart insights, it keeps you motivated every step of the way. Supports both dark and light themes for the perfect vibe—day or night. Whether it’s personal growth or big wins, this app helps you crush it, one milestone at a time. 🌗📈",
+    image: [
+      "https://github.com/varun-chaudhary/Sources/raw/main/Projects/LearnFlow/LF1.png",
+    ],
+    tags: ["Django", "React", "PostgreSQL"],
+    category: "AI",
+    github:
+      "https://github.com/varun-chaudhary/LearnFlow-AI-based-study-plan-generator",
+    webapp: "",
+    youtube: "https://www.youtube.com/watch?v=Q5HbSMyNk5s",
+  },
+  {
+    id: 1,
+    title: "Goal Tracker",
+    date: "Feb 2025",
+    description:
+      "A <strong>sleek</strong> and <strong>powerful</strong> web app to <strong>set goals</strong>, <strong>track milestones</strong>, and stay <strong>laser-focused</strong>! Featuring a <strong>dashboard</strong>, <strong>detailed progress reports</strong>, and <strong>smart insights</strong>, it keeps you <strong>motivated</strong> every step of the way. Supports both <strong>dark</strong> and <strong>light themes</strong> for the perfect vibe—day or night. Whether it’s <strong>personal growth</strong> or <strong>big wins</strong>, this app helps you <strong>crush it</strong>. 🌗📈",
     image: [
       "https://github.com/varun-chaudhary/Sources/raw/main/Projects/GoalTracker/GT1.png",
       "https://github.com/varun-chaudhary/Sources/raw/main/Projects/GoalTracker/GT2.png",
@@ -204,23 +220,7 @@ export const projects = [
   },
   {
     id: 1,
-    title: "Learn Flow",
-    date: "Feb 2025",
-    description:
-      "A sleek and powerful web app to set goals, track milestones, and stay laser-focused! Featuring a customizable dashboard, detailed progress reports, and smart insights, it keeps you motivated every step of the way. Supports both dark and light themes for the perfect vibe—day or night. Whether it’s personal growth or big wins, this app helps you crush it, one milestone at a time. 🌗📈",
-    image: [
-      "https://github.com/varun-chaudhary/Sources/raw/main/Projects/LearnFlow/LF1.png",
-    ],
-    tags: ["Django", "React", "SQLite"],
-    category: "AI",
-    github:
-      "https://github.com/varun-chaudhary/LearnFlow-AI-based-study-plan-generator",
-    webapp: "",
-    youtube: "https://www.youtube.com/watch?v=Q5HbSMyNk5s",
-  },
-  {
-    id: 1,
-    title: "Personal Portfolio",
+    title: "Portfolio",
     date: "April 2025",
     description:
       "This is my personal portfolio website, showcasing my skills, projects, and experience. It is built using React and Tailwind CSS.",
@@ -235,10 +235,10 @@ export const projects = [
   },
   {
     id: 1,
-    title: "ARC Gaming Events",
+    title: "ARC Gaming",
     date: "April 2025",
     description:
-      "A full-stack web application built with React, Node.js, and MongoDB for managing gaming events. It features JWT-based authentication and role-based access control for Admins, Organizers, and Players. Admins can manage users, create events, and view statistics. Organizers can propose events, which require admin approval. Players can join approved events. The project emphasizes secure route protection and role management.",
+      "A full-stack web application built with <strong>React</strong>, <strong>Node.js</strong>, and <strong>MongoDB</strong> for managing gaming events. It features <strong>JWT-based authentication</strong> and <strong>role-based access control</strong> for <strong>Admins</strong>, <strong>Organizers</strong>, and <strong>Players</strong>. <strong>Admins</strong> can manage users, create events, and view <strong>statistics</strong>. <strong>Organizers</strong> can propose events, which require <strong>admin approval</strong>. <strong>Players</strong> can join approved events. The project emphasizes <strong>secure route protection</strong> and robust <strong>role management</strong>.",
     image: [
       "https://github.com/varun-chaudhary/Sources/raw/main/Projects/ARCAdmin/ARC5.png",
       "https://github.com/varun-chaudhary/Sources/raw/main/Projects/ARCAdmin/ARC6.png",
@@ -258,7 +258,7 @@ export const projects = [
     title: "DocScanner",
     date: "March 2025",
     description:
-      "A web application that scans uploaded documents and compares them for similarity detection. Each user gets 20 credits per day, with 1 credit used per scan. Credits reset automatically at midnight. Users can request additional credits from the admin, which are added to their wallet upon approval Admins have access to an analytics dashboard to monitor user activity, including the number of scans per user and the most common words across all documents.",
+      "A web application that <strong>scans uploaded documents</strong> and performs <strong>similarity detection</strong>. Each user gets <strong>20 credits per day</strong>, with <strong>1 credit used per scan</strong>. <strong>Credits reset automatically at midnight</strong>. Users can <strong>request additional credits</strong> from the admin, which are added to their <strong>wallet upon approval</strong>. <strong>Admins</strong> have access to an <strong>analytics dashboard</strong> to monitor user activity, including the <strong>number of scans per user</strong> and the <strong>most common words</strong> across all documents.",
     image: [
       "https://github.com/varun-chaudhary/Sources/raw/main/Projects/DocScanner/DOC1.png",
       "https://github.com/varun-chaudhary/Sources/raw/main/Projects/DocScanner/DOC2.png",
@@ -321,7 +321,7 @@ export const experience = [
     role: "Software Development Engineer Intern",
     duration: "July 2024 - Dec 2024",
     description:
-      '<ul><li>Built a <a href="https://your-feature-link.com" target="_blank" rel="noopener noreferrer" style="color: #007bff; text-decoration: underline;"><strong>card stack feature</strong></a> with smooth, high-performance animations for a <strong>cross-platform app serving 50M+ users</strong>.</li><li><strong>Optimized polling logic</strong> for fetching AI-generated playlist artwork, reducing latency by <strong>64% (11s → 4s)</strong>.</li><li>Implemented a <strong>factory pattern</strong> to unify genre- and artist-based processors into a single Lambda, <strong>cutting costs by 50%</strong>.</li><li>Developed a <strong>language-based artist taste collector</strong> (frontend + backend) to personalize music for <strong>new users</strong>.</li><li><strong>Won hackathon</strong> with a solution that delivers more relevant tracks from <strong>vague or ambiguous prompts</strong>.</li></ul>',
+      '<ul><li>Built a <a href="https://your-feature-link.com" target="_blank" rel="noopener noreferrer" style="color: #007bff; text-decoration: underline;"><strong>card stack feature</strong></a> with smooth, high-performance animations for a <strong>cross-platform Amazon Music app serving 50M+ users</strong>.</li><li><strong>Optimized polling logic</strong> for fetching AI-generated playlist artwork, reducing latency by <strong>64% (11s → 4s)</strong>.</li><li>Implemented a <strong>factory pattern</strong> to unify genre- and artist-based processors—used to <strong>compute top artists weekly based on listen counts</strong>—into a single Lambda, <strong>cutting costs by 50%</strong>.</li><li>Developed a <strong>language-based artist taste collector</strong> (frontend + backend) to personalize music for <strong>new users</strong>.</li><li><strong>Won hackathon</strong> with a solution that delivers more relevant tracks from <strong>vague or ambiguous prompts</strong>.</li></ul>',
     skills: [
       "React Native",
       "Android SDK",

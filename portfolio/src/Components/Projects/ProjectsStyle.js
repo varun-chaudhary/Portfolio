@@ -60,6 +60,7 @@ export const Desc = styled.div`
 `;
 
 export const ToggleButtonGroup = styled.div`
+  padding: 20px;
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -77,14 +78,15 @@ export const ToggleButton = styled.div`
   font-size: 16px;
   font-weight: 500;
   color: ${({ theme }) => theme.text_primary};
-  background: ${({ active, theme }) => active ? theme.primary + 30 : theme.card};
+  background: ${({ active, theme }) =>
+    active ? theme.primary + 30 : theme.card};
   border: 1.5px solid ${({ theme }) => theme.primary};
   transition: all 0.3s ease;
-  
+
   &:hover {
     background: ${({ theme }) => theme.primary + 15};
   }
-  
+
   @media (max-width: 768px) {
     padding: 6px 12px;
     font-size: 14px;
