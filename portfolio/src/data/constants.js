@@ -9,7 +9,8 @@ export const Bio = {
   description:
     "Software Engineer with expertise in <strong>Full Stack Development</strong> and experience in <strong>cross-platform mobile app development</strong>. I have professional experience building features that serve <strong>over 50 million customers</strong>.",
   github: "https://github.com/varun-chaudhary",
-  resume: "#",
+  resume:
+    "https://drive.google.com/file/d/1gIym1L6erPUcJlRbfkRzg-I7gVPCHAT5/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/varunchaudharycse/",
   leetcode: "https://leetcode.com/varunc105/",
   phone: "+91 7087637794",
